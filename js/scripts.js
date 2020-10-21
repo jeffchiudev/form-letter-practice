@@ -1,7 +1,11 @@
 $(document).ready(function() {
     $("#letterForm").submit(function(event) {
-        $(".name").append("blah blah");
+        const nameInput = $("input#name").val();
+
+        $(".name").text(nameInput);
+
         $("#filled-letter").show();
+        
         event.preventDefault();
     });
-})
+});
